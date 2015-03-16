@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tracker>
+	<globals>
+		<datafile>tracker.dat</datafile>
+		<mintotray>1</mintotray>
+		<logsusd>1</logsusd>
+	</globals>
+	<activities>
+		<activity>
+			<description>Project Meetings</description>
+			<taskid1>XAVI</taskid1>
+			<taskid2>11411</taskid2>
+			<taskid3>B4PMEETI</taskid3>
+			<enabled>1</enabled>
+		</activity>
+		<activity>
+			<description>Requirements</description>
+			<taskid1>XAVI</taskid1>
+			<taskid2>11399</taskid2>
+			<taskid3>D2RREV</taskid3>
+			<enabled>1</enabled>
+		</activity>
+		<activity>
+			<description>General Admin</description>
+			<taskid1>INTERNAL</taskid1>
+			<taskid2>1434</taskid2>
+			<taskid3>X5ADMIN</taskid3>
+			<enabled>0</enabled>
+		</activity>
+		<activity>
+			<description>Design work</description>
+			<taskid1>XAVI</taskid1>
+			<taskid2>11399</taskid2>
+			<taskid3>E1FSPEC</taskid3>
+			<enabled>1</enabled>
+		</activity>
+	</activities>
+</tracker>
