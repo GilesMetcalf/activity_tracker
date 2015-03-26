@@ -14,3 +14,8 @@ Stuff To Do
 5. Call that function on initial trkConfigurationTable load, and if Cancel button clicked
 6. Commit button should build an array of new/changed trkActivity objects
 7. Commit button should build an array of deleted activity IDs
+8. Need separate sets of buttons for activities and tasks
+   Two sets of config data (in same XML file)
+   Two panels and two button groups
+   Change activity button will need to scan both sets of buttons to see what was selected to construct output
+9. Don't try to make it too generic! (at the moment...)
