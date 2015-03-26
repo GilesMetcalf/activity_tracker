@@ -70,7 +70,7 @@ public class trkConfigFrame extends javax.swing.JFrame {
 		
 		tbConfigs.getTableHeader().setBackground(Color.LIGHT_GRAY);
 		tbConfigs.getTableHeader().setForeground(Color.BLACK);
-        Font Tablefont = new Font("Arial", Font.BOLD, 12);
+        	Font Tablefont = new Font("Arial", Font.BOLD, 12);
 		tbConfigs.getTableHeader().setFont(Tablefont);
 
 		//Hide the ID column
@@ -84,7 +84,7 @@ public class trkConfigFrame extends javax.swing.JFrame {
 		tbConfigs.getColumnModel().getColumn(4).setPreferredWidth(53);
 		tbConfigs.getColumnModel().getColumn(5).setPreferredWidth(45);
 		
-		tbConfigs.getModel().addTableModelListener(new TableModelListener() {
+	/*	tbConfigs.getModel().addTableModelListener(new TableModelListener() {
 
 		      public void tableChanged(TableModelEvent e) {
 		    	  TableModel tm = tbConfigs.getModel();
@@ -96,7 +96,7 @@ public class trkConfigFrame extends javax.swing.JFrame {
 		    	  System.out.println(rAct.getDescription());
 		      	}
 		    });
-
+	*/
 		
 		tbConfigs.setPreferredScrollableViewportSize(tbConfigs.getPreferredSize());
         JScrollPane scrollPane = new JScrollPane(tbConfigs);
@@ -112,7 +112,10 @@ public class trkConfigFrame extends javax.swing.JFrame {
         JButton btnCncl = new JButton("Cancel");
         btnCncl.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-        		
+        		//Rebuild the table model from the original data
+        		model = new DefaultTableModel(object, headers);
+			tbConfigs.setModel(model);
+			tbConfigs.fireTableStructureChanged();
         	}
         });
         JPanel mgPn = new JPanel();
@@ -136,4 +139,7 @@ public class trkConfigFrame extends javax.swing.JFrame {
 		return thisAct;
 	}
 	
+	private DefaultTableModel getModel(Object[] object, Object[] headers) {
+		
+	}
 }
